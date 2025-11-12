@@ -4,13 +4,14 @@
   "description": "devTinde Backend using Nodejs",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js"
   },
   "author": "Akshad Jaiswal",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-ses": "^3.929.0",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
