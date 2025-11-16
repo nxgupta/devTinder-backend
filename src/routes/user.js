@@ -26,7 +26,6 @@ userRouter.get("/user/requests/recieved", userAuth, async (req, res) => {
 userRouter.get("/user/connections", userAuth, async (req, res) => {
   try {
     const loggedInUser = req.user;
-    console.log(loggedInUser);
     const connectionRequests = await ConnectionRequestModel.find({
       $or: [
         { toUserId: loggedInUser._id, status: "accepted" },

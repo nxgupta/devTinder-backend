@@ -37,7 +37,6 @@ requestRouter.post(
           { fromUserId: toUserId, toUserId: fromUserId },
         ],
       });
-      console.log(existingConnectionRequest);
       if (existingConnectionRequest) {
         throw new Error("Already sent the connection request before");
       }

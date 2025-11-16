@@ -39,7 +39,6 @@ const createSendEmailCommand = (toAddress, fromAddress) => {
 };
 
 const run = async (toAddress) => {
-    console.log(toAddress)
     const sendEmailCommand = createSendEmailCommand(
         toAddress,
         "no-reply@nxgupta.shop",

@@ -47,7 +47,7 @@ const userSchema = new mongoose.Schema(
       required: false,
       trim: true,
       validate(value) {
-        if (!["male", "female", "others","Male", "Female", "Others"].includes(value)) {
+        if (!["male", "female", "others", "Male", "Female", "Others"].includes(value)) {
           throw new Error("Not a valid gender (Male , Female and other)");
         }
       },
@@ -68,6 +68,13 @@ const userSchema = new mongoose.Schema(
     skills: {
       type: [String],
     },
+    isPremium: {
+      type: Boolean,
+      default: false
+    },
+    membershipType: {
+      type: String
+    }
   },
   {
     timestamps: true,
